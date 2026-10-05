@@ -1,0 +1,157 @@
+/* ==========================================================================
+   NOURIVA — RESPONSIVE STYLESHEET
+   Mobile-first breakpoint refinements
+   ========================================================================== */
+
+/* Large Desktop (> 1400px) */
+@media (min-width: 1400px) {
+  .container-editorial {
+    max-width: 1320px;
+  }
+}
+
+/* Standard Desktop / Tablet Landscape (992px to 1199px) */
+@media (max-width: 1199px) {
+  .doc-layout {
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+  }
+  .doc-sidebar-right {
+    display: none; /* Hide sticky TOC on smaller desktops or convert to collapsible */
+  }
+  .doc-article-pane {
+    padding: 2rem;
+  }
+}
+
+/* Tablet Portrait & Mobile (<= 991px) */
+@media (max-width: 991px) {
+  .navbar-inner {
+    height: 64px;
+  }
+
+  .nav-menu-desktop,
+  .nav-actions-right .btn-nour-primary,
+  .nav-actions-right .nav-auth-link {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-sidebar-left {
+    position: static;
+    max-height: none;
+    margin-bottom: 2rem;
+    padding-right: 0;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.5rem;
+  }
+
+  .doc-sidebar-right {
+    display: none;
+  }
+
+  .hero-stat-badge {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .glossary-alphabet-bar {
+    top: 70px;
+  }
+
+  .auth-card {
+    padding: 1.75rem;
+  }
+}
+
+/* Small Devices (<= 767px) */
+@media (max-width: 767px) {
+  .hero-search-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+  }
+
+  .hero-search-wrapper .btn-nour-primary {
+    width: 100%;
+  }
+
+  .doc-article-pane {
+    padding: 1.5rem;
+  }
+
+  .discussion-card {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .discussion-upvote-btn {
+    flex-direction: row;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .alphabet-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .search-modal-container {
+    max-height: 90vh;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Extra Small (<= 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.4rem;
+  }
+
+  .section-padding {
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .auth-card {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .nouriva-toast-container {
+    right: 12px;
+    left: 12px;
+    bottom: 16px;
+  }
+
+  .nouriva-toast {
+    min-width: unset;
+    width: 100%;
+  }
+}

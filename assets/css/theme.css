@@ -1,0 +1,163 @@
+/* ==========================================================================
+   NOURIVA — THEME & DESIGN TOKENS
+   Nutrition Recovery Resource & Knowledge Network
+   ========================================================================== */
+
+:root {
+  /* Brand Typography */
+  --font-editorial: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* LIGHT MODE PALETTE (Warm Ivory, Deep Forest, Soft Sage, Charcoal, Muted Sand, Restrained Amber) */
+  --bg-primary: #FAF8F5;          /* Warm Ivory Canvas */
+  --bg-surface: #FFFFFF;          /* Pure Card Background */
+  --bg-surface-elevated: #F5EFEB; /* Elevated Panel */
+  --bg-subtle: #F0EAE1;           /* Subtle Sand Area */
+  --bg-muted: #EBE4DA;            /* Muted Separators */
+  --bg-highlight: #EAE3D6;        /* Highlight Box */
+  
+  --forest-900: #0F221A;
+  --forest-800: #1B382B;          /* Primary Deep Forest Brand */
+  --forest-700: #264E3D;
+  --forest-600: #346751;
+  --forest-100: #E6EDE9;
+  --forest-50: #F2F6F4;
+
+  --sage-700: #4B6357;
+  --sage-600: #5C786A;
+  --sage-500: #718E80;
+  --sage-400: #8FA89B;          /* Soft Sage Accent */
+  --sage-300: #ADC2B7;
+  --sage-200: #CDDCD4;
+  --sage-100: #E7EFEA;
+  --sage-50: #F4F8F6;
+
+  --amber-700: #934C1E;
+  --amber-600: #B15E26;
+  --amber-500: #C97A3E;          /* Restrained Amber Accent */
+  --amber-400: #DB9156;
+  --amber-100: #F8ECE2;
+  --amber-50: #FDF7F3;
+
+  --sand-500: #B5A898;
+  --sand-400: #CCC0B2;
+  --sand-300: #E2D9CE;
+  --sand-200: #EDE6DE;
+  --sand-100: #F5EFEB;          /* Muted Sand */
+  --sand-50: #FAF7F4;
+
+  --charcoal-900: #121514;
+  --charcoal-800: #1C2321;        /* Primary Deep Charcoal */
+  --charcoal-700: #2C3532;
+  --charcoal-600: #404B47;
+  --charcoal-500: #5D6A65;
+  --charcoal-400: #7F8D88;
+  --charcoal-300: #A5B2AD;
+  --charcoal-200: #CFD7D3;
+  --charcoal-100: #E8ECEB;
+
+  /* Typography Colors */
+  --text-primary: #1C2321;        /* Deep Charcoal Text */
+  --text-secondary: #404B47;      /* Muted Forest Charcoal */
+  --text-muted: #71807A;          /* Gentle Tertiary Text */
+  --text-inverse: #FAF8F5;        /* Ivory on dark */
+  --text-accent: #1B382B;         /* Editorial Header Accent */
+  --text-amber: #B15E26;
+
+  /* Borders & Dividers */
+  --border-subtle: #E8E0D5;
+  --border-medium: #D8CCC0;
+  --border-strong: #BAAB9C;
+  --border-focus: #1B382B;
+
+  /* UI Tokens */
+  --brand-primary: #1B382B;
+  --brand-hover: #132A20;
+  --brand-accent: #C97A3E;
+  --brand-accent-hover: #B15E26;
+  --brand-soft: #E6EDE9;
+  
+  --badge-bg-sage: #E7EFEA;
+  --badge-text-sage: #264E3D;
+  --badge-bg-amber: #F8ECE2;
+  --badge-text-amber: #934C1E;
+  --badge-bg-forest: #E6EDE9;
+  --badge-text-forest: #1B382B;
+  --badge-bg-sand: #EDE6DE;
+  --badge-text-sand: #5D6A65;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(28, 35, 33, 0.04);
+  --shadow-sm: 0 2px 8px rgba(28, 35, 33, 0.06);
+  --shadow-md: 0 6px 18px rgba(28, 35, 33, 0.07);
+  --shadow-lg: 0 12px 32px rgba(28, 35, 33, 0.09);
+  --shadow-xl: 0 20px 48px rgba(28, 35, 33, 0.12);
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Glass Effects */
+  --nav-glass-bg: rgba(250, 248, 245, 0.88);
+  --nav-glass-border: rgba(232, 224, 213, 0.7);
+  --modal-overlay: rgba(18, 21, 20, 0.6);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   DARK MODE PALETTE
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-primary: #101413;          /* Deep Charcoal Black */
+  --bg-surface: #171C1A;          /* Dark Surface */
+  --bg-surface-elevated: #1F2522; /* Elevated Dark Panel */
+  --bg-subtle: #242C29;           /* Subtle Dark Surface */
+  --bg-muted: #2E3733;            /* Separators */
+  --bg-highlight: #28332E;        /* Highlight Box in Dark */
+
+  --text-primary: #F4EFEA;        /* Warm Off-white */
+  --text-secondary: #BDC8C3;      /* Soft Light Sage Text */
+  --text-muted: #85958E;          /* Muted Secondary */
+  --text-inverse: #101413;
+  --text-accent: #D8E4DE;
+  --text-amber: #E29962;
+
+  --border-subtle: #2A332F;
+  --border-medium: #37443F;
+  --border-strong: #4F605A;
+  --border-focus: #8FA89B;
+
+  --brand-primary: #8FA89B;
+  --brand-hover: #A7BCB2;
+  --brand-accent: #DB9156;
+  --brand-accent-hover: #E8A873;
+  --brand-soft: #1E2924;
+
+  --badge-bg-sage: #1E2A24;
+  --badge-text-sage: #ADC2B7;
+  --badge-bg-amber: #2C211A;
+  --badge-text-amber: #DB9156;
+  --badge-bg-forest: #1F2E27;
+  --badge-text-forest: #A5C2B4;
+  --badge-bg-sand: #262D2A;
+  --badge-text-sand: #BDC8C3;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.7);
+
+  --nav-glass-bg: rgba(16, 20, 19, 0.9);
+  --nav-glass-border: rgba(42, 51, 47, 0.8);
+  --modal-overlay: rgba(0, 0, 0, 0.75);
+}
