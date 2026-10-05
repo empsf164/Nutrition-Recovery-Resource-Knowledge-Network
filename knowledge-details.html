@@ -6,6 +6,7 @@
   <title>Understanding Macronutrients & Muscle Protein Synthesis — NOURIVA</title>
   <meta name="description" content="An evidence-informed deep dive into how proteins, carbohydrates, and fats metabolically cooperate to support cellular repair and physical recovery.">
   <link rel="canonical" href="https://nouriva.org/knowledge-details.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +22,6 @@
 </head>
 <body>
 
-  <!-- Health Disclaimer Bar -->
-  <div class="health-disclaimer-bar">
-    <i class="bi bi-shield-check"></i>
-    <span><strong>Educational Notice:</strong> NOURIVA provides educational resources and is not a substitute for professional medical or dietary advice.</span>
-  </div>
-
   <!-- Primary Sticky Header -->
   <header class="nouriva-header">
     <div class="container-editorial">
@@ -36,30 +31,37 @@
           <span>NOURIVA</span>
         </a>
 
-        <nav class="d-none d-lg-block" aria-label="Main Navigation">
+        <!-- Main Desktop Navigation (Direct Links - No Dropdowns) -->
+        <nav class="desktop-nav-wrap d-none d-xl-block" aria-label="Main Navigation">
           <ul class="nav-menu-desktop">
             <li class="nav-item"><a href="index.html" class="nav-link-custom">Home</a></li>
             <li class="nav-item"><a href="explore.html" class="nav-link-custom active">Explore</a></li>
-            <li class="nav-item"><a href="explore.html" class="nav-link-custom">Knowledge</a></li>
             <li class="nav-item"><a href="resources.html" class="nav-link-custom">Resources</a></li>
             <li class="nav-item"><a href="videos.html" class="nav-link-custom">Videos</a></li>
             <li class="nav-item"><a href="community.html" class="nav-link-custom">Community</a></li>
             <li class="nav-item"><a href="guides.html" class="nav-link-custom">Guides</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link-custom">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link-custom">Contact</a></li>
           </ul>
         </nav>
 
+        <!-- Right Header Actions -->
         <div class="nav-actions-right">
-          <button class="search-trigger-btn search-trigger" aria-label="Open Global Search">
-            <i class="bi bi-search"></i>
-            <span class="d-none d-md-inline">Search</span>
-            <span class="kbd-shortcut d-none d-xl-inline">⌘K</span>
-          </button>
-          <a href="saved.html" class="btn-icon" aria-label="Saved Collection"><i class="bi bi-bookmark"></i></a>
-          <button class="theme-toggle-btn" aria-label="Toggle light and dark mode"><i class="bi bi-moon-stars"></i></button>
-          <a href="login.html" class="nav-link-custom nav-auth-link">Login</a>
-          <a href="signup.html" class="nav-link-custom nav-auth-link">Sign Up</a>
-          <a href="explore.html" class="btn btn-nour-primary d-none d-lg-inline-flex">Explore Knowledge <i class="bi bi-arrow-right"></i></a>
+          <!-- Desktop-only Actions (Hidden on <= 1024px) -->
+          <div class="header-desktop-actions">
+            <!-- Saved Collection Icon Button -->
+            <a href="saved.html" class="btn-icon" aria-label="Saved Collection" title="Saved Collection">
+              <i class="bi bi-bookmark"></i>
+            </a>
+
+            <!-- Dark / Light Mode Toggle -->
+            <button class="theme-toggle-btn" aria-label="Toggle light and dark mode"><i class="bi bi-moon-stars"></i></button>
+
+            <!-- Login Button -->
+            <a href="login.html" class="btn btn-nour-primary btn-sm">Login</a>
+          </div>
+
+          <!-- Mobile / Tablet Hamburger Toggle (Visible on <= 1024px) -->
           <button class="mobile-toggle-btn" aria-label="Open Mobile Menu"><i class="bi bi-list"></i></button>
         </div>
       </div>
@@ -71,25 +73,36 @@
     <div class="reading-progress-bar"></div>
   </div>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+  <!-- Mobile Navigation Drawer (Exact same links and buttons as Navbar) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-label="Mobile Navigation">
     <div class="mobile-nav-header">
       <a href="index.html" class="brand-logo">
         <div class="brand-mark"><i class="bi bi-flower1"></i></div>
         <span>NOURIVA</span>
       </a>
-      <button class="btn-icon" id="mobileDrawerClose"><i class="bi bi-x-lg"></i></button>
+      <button class="btn-icon" id="mobileDrawerClose" aria-label="Close Mobile Menu"><i class="bi bi-x-lg"></i></button>
     </div>
     <ul class="mobile-nav-links">
       <li class="mobile-nav-item"><a href="index.html" class="mobile-link">Home</a></li>
-      <li class="mobile-nav-item"><a href="explore.html" class="mobile-link active">Explore Knowledge</a></li>
-      <li class="mobile-nav-item"><a href="videos.html" class="mobile-link">Videos</a></li>
+      <li class="mobile-nav-item"><a href="explore.html" class="mobile-link">Explore</a></li>
       <li class="mobile-nav-item"><a href="resources.html" class="mobile-link">Resources</a></li>
+      <li class="mobile-nav-item"><a href="videos.html" class="mobile-link">Videos</a></li>
       <li class="mobile-nav-item"><a href="community.html" class="mobile-link">Community</a></li>
       <li class="mobile-nav-item"><a href="guides.html" class="mobile-link">Guides</a></li>
-      <li class="mobile-nav-item"><a href="saved.html" class="mobile-link">Saved Collection</a></li>
       <li class="mobile-nav-item"><a href="about.html" class="mobile-link">About</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-link">Contact</a></li>
     </ul>
+    <div class="mobile-nav-footer">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <a href="saved.html" class="btn btn-nour-secondary w-100 justify-content-center">
+          <i class="bi bi-bookmark me-1"></i> Saved Collection
+        </a>
+        <button class="theme-toggle-btn flex-shrink-0" aria-label="Toggle light and dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-nour-primary w-100 justify-content-center">Login</a>
+    </div>
   </div>
 
   <!-- ARTICLE DOCUMENTATION LAYOUT -->
@@ -353,111 +366,77 @@
     </div>
   </main>
 
-  <!-- RELATED CONTENT SECTION -->
-  <section class="section-padding bg-surface-elevated" style="background-color: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle);">
-    <div class="container-editorial">
-      <h3 class="section-title mb-4">Related Knowledge & Media</h3>
-      <div class="row g-4">
-        
-        <div class="col-lg-4 col-md-6">
-          <div class="nour-card knowledge-card">
-            <div class="card-img-wrap" style="height: 160px;">
-              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Building a Balanced Recovery Meal">
-            </div>
-            <div class="card-body">
-              <span class="badge-nouriva badge-amber mb-2">Recovery</span>
-              <h4 class="card-title" style="font-size: 1.15rem;"><a href="knowledge-details.html">Building a Balanced Post-Training Recovery Meal</a></h4>
-              <p class="card-desc small">Why a 3:1 carbohydrate-to-protein ratio accelerates glycogen restoration.</p>
-              <a href="knowledge-details.html" class="small fw-bold mt-auto">Read Article <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="nour-card video-card">
-            <div class="video-thumb-wrap" style="height: 160px;">
-              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Video lecture">
-              <a href="video-details.html" class="video-play-badge" style="width: 42px; height: 42px; font-size: 1.1rem;"><i class="bi bi-play-fill"></i></a>
-              <span class="video-duration-chip">14:20</span>
-            </div>
-            <div class="card-body">
-              <span class="badge-nouriva badge-forest mb-2">Video Masterclass</span>
-              <h4 class="card-title" style="font-size: 1.15rem;"><a href="video-details.html">How Recovery Nutrition Works: Cellular Repair</a></h4>
-              <p class="card-desc small">14-minute visual masterclass on metabolic pathways by Dr. Elena Rostova.</p>
-              <a href="video-details.html" class="small fw-bold mt-auto">Watch Video <i class="bi bi-play-circle"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="nour-card discussion-card p-3 h-100">
-            <div class="discussion-content-wrap">
-              <span class="badge-nouriva badge-sand mb-2">Community Exchange</span>
-              <h5 class="discussion-card-title mb-2"><a href="discussion-details.html">What is your most reliable whole-food post-training meal?</a></h5>
-              <p class="discussion-card-excerpt small">18 community members sharing fast recipes with minimal kitchen prep.</p>
-              <a href="discussion-details.html" class="small fw-bold mt-auto d-inline-block">Join Discussion <i class="bi bi-chat-left"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- NOURIVA FOOTER -->
   <footer class="nouriva-footer">
     <div class="container-editorial">
       <div class="row g-4">
+        
         <div class="col-lg-4 col-md-6 footer-brand-col">
           <a href="index.html" class="brand-logo mb-3 d-inline-flex">
             <div class="brand-mark"><i class="bi bi-flower1"></i></div>
             <span>NOURIVA</span>
           </a>
-          <p>An evidence-informed digital knowledge network dedicated to nutrition education, recovery habits, meal planning, hydration, and sustainable wellness routines.</p>
+          <p>
+            An evidence-informed digital knowledge network dedicated to nutrition education, recovery habits, meal planning, hydration, and sustainable wellness routines.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
         </div>
+
         <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Knowledge</h5>
+          <h5 class="footer-heading">Navigation</h5>
           <ul class="footer-links">
-            <li><a href="explore.html">Encyclopedia</a></li>
-            <li><a href="explore.html?topic=recovery">Recovery Science</a></li>
-            <li><a href="glossary.html">Terminology</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Resources</h5>
-          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore Knowledge</a></li>
             <li><a href="resources.html">Downloadable Tools</a></li>
-            <li><a href="videos.html">Video Tutorials</a></li>
-            <li><a href="saved.html">Saved Collection</a></li>
+            <li><a href="videos.html">Video Masterclasses</a></li>
+            <li><a href="glossary.html">Terminology Glossary</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Community</h5>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">Community & Guides</h5>
           <ul class="footer-links">
-            <li><a href="community.html">Discussions</a></li>
-            <li><a href="guides.html">Curated Guides</a></li>
+            <li><a href="community.html">Community Discussions</a></li>
+            <li><a href="guides.html">Editorial Guides</a></li>
+            <li><a href="saved.html">Saved Collection</a></li>
             <li><a href="signup.html">Join Network</a></li>
+            <li><a href="login.html">Account Login</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">About</h5>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">About NOURIVA</h5>
           <ul class="footer-links">
             <li><a href="about.html">Our Mission</a></li>
             <li><a href="about.html#standards">Content Standards</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html#evidence">Evidence Approach</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+            <li><a href="contact.html#faq">Platform FAQ</a></li>
           </ul>
         </div>
+
       </div>
+
+      <!-- Mandatory Health Disclaimer Card -->
       <div class="footer-disclaimer-card">
-        <strong>Important Health & Educational Notice:</strong> The content provided on NOURIVA is strictly for general educational and informational purposes. NOURIVA is not a healthcare provider or clinical prescription platform.
+        <strong>Important Health & Educational Notice:</strong> The content provided on NOURIVA is strictly for general educational and informational purposes. NOURIVA is not a healthcare provider, clinical diagnostic service, or dietary prescription platform. Information presented does not constitute medical advice and should not replace personalized evaluation, diagnosis, or treatment by a qualified physician or registered dietitian.
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 NOURIVA Digital Knowledge Network. All rights reserved.</span>
         <div class="d-flex gap-3">
           <a href="about.html" class="text-muted">Educational Standards</a>
           <a href="about.html" class="text-muted">Privacy Policy</a>
+          <a href="about.html" class="text-muted">Terms of Knowledge Use</a>
         </div>
       </div>
+
     </div>
   </footer>
 

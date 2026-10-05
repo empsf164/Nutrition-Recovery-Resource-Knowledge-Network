@@ -1838,13 +1838,21 @@ img {
    11. AUTH PAGES (login.html, signup.html, forgot-password.html)
    -------------------------------------------------------------------------- */
 .auth-page-wrapper {
-  min-height: calc(100vh - 72px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
   background: radial-gradient(circle at top right, var(--sand-100) 0%, transparent 60%),
               var(--bg-primary);
+  position: relative;
+}
+
+.auth-floating-theme-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 50;
 }
 
 .auth-card {
@@ -1855,6 +1863,84 @@ img {
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.auth-brand-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.auth-brand-center .brand-mark {
+  width: 48px;
+  height: 48px;
+  background-color: var(--forest-800);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAF8F5;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .auth-brand-center .brand-mark {
+  background-color: var(--sage-400);
+  color: #101413;
+}
+
+.auth-brand-center .brand-name {
+  font-family: var(--font-editorial);
+  font-size: 1.85rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.social-auth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.social-auth-btn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.social-auth-btn:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-strong);
+}
+
+/* Contact Map */
+.contact-map-wrapper {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+}
+
+.contact-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .auth-header {

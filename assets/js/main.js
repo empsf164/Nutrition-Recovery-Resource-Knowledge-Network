@@ -66,41 +66,23 @@
     });
   }
 
-  // 2. GSAP Restrained Animations
+  // 2. Motion Transitions (Clean & Safe)
   function initAnimations() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
 
     if (typeof gsap !== 'undefined') {
-      // Hero entrance
+      // Subtle Hero entrance only
       const heroContent = document.querySelector('.hero-content-reveal');
       if (heroContent) {
         gsap.from(heroContent.children, {
-          y: 24,
+          y: 16,
           opacity: 0,
-          duration: 0.8,
-          stagger: 0.12,
-          ease: 'power3.out'
-        });
-      }
-
-      // Card batch reveal on scroll
-      const cards = document.querySelectorAll('.nour-card, .topic-card, .discussion-card');
-      if (cards.length) {
-        cards.forEach((card, index) => {
-          gsap.from(card, {
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            },
-            y: 20,
-            opacity: 0,
-            duration: 0.6,
-            delay: (index % 3) * 0.08,
-            ease: 'power2.out'
-          });
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power2.out',
+          clearProps: 'all'
         });
       }
     }

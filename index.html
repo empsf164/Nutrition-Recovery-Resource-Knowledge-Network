@@ -6,6 +6,7 @@
   <title>NOURIVA — Nutrition Recovery Resource & Knowledge Network</title>
   <meta name="description" content="A trusted digital knowledge network for nutrition science, recovery habits, meal planning, hydration, and sustainable wellness routines.">
   <link rel="canonical" href="https://nouriva.org/">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <!-- Google Fonts: DM Serif Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,12 +24,6 @@
 </head>
 <body>
 
-  <!-- Health Educational Disclaimer Bar -->
-  <div class="health-disclaimer-bar">
-    <i class="bi bi-shield-check"></i>
-    <span><strong>Educational Notice:</strong> NOURIVA provides educational resources and is not a substitute for professional medical or dietary advice.</span>
-  </div>
-
   <!-- Primary Sticky Header -->
   <header class="nouriva-header">
     <div class="container-editorial">
@@ -40,114 +35,39 @@
           <span>NOURIVA</span>
         </a>
 
-        <!-- Main Desktop Navigation -->
-        <nav class="d-none d-lg-block" aria-label="Main Navigation">
+        <!-- Main Desktop Navigation (Direct Links - No Dropdowns) -->
+        <nav class="desktop-nav-wrap d-none d-xl-block" aria-label="Main Navigation">
           <ul class="nav-menu-desktop">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link-custom active">Home</a>
-            </li>
-            
-            <!-- Explore Dropdown -->
-            <li class="nav-item">
-              <a href="explore.html" class="nav-link-custom">
-                Explore <i class="bi bi-chevron-down dropdown-caret"></i>
-              </a>
-              <ul class="nouriva-dropdown dropdown-wide">
-                <li><a href="explore.html?topic=fundamentals" class="dropdown-item-custom"><i class="bi bi-egg-fried"></i> Nutrition Fundamentals</a></li>
-                <li><a href="explore.html?topic=recovery" class="dropdown-item-custom"><i class="bi bi-heart-pulse"></i> Recovery Nutrition</a></li>
-                <li><a href="explore.html?topic=hydration" class="dropdown-item-custom"><i class="bi bi-droplet-half"></i> Hydration</a></li>
-                <li><a href="explore.html?topic=mealplanning" class="dropdown-item-custom"><i class="bi bi-calendar2-check"></i> Meal Planning</a></li>
-                <li><a href="explore.html?topic=protein" class="dropdown-item-custom"><i class="bi bi-fire"></i> Protein & Energy</a></li>
-                <li><a href="explore.html?topic=vitamins" class="dropdown-item-custom"><i class="bi bi-capsule"></i> Vitamins & Minerals</a></li>
-                <li><a href="explore.html?topic=preactivity" class="dropdown-item-custom"><i class="bi bi-lightning-charge"></i> Pre-Activity Nutrition</a></li>
-                <li><a href="explore.html?topic=postactivity" class="dropdown-item-custom"><i class="bi bi-arrow-repeat"></i> Post-Activity Nutrition</a></li>
-                <li><a href="explore.html?topic=sleep" class="dropdown-item-custom"><i class="bi bi-moon-stars"></i> Sleep & Recovery</a></li>
-                <li><a href="explore.html?topic=habits" class="dropdown-item-custom"><i class="bi bi-shield-check"></i> Healthy Habits</a></li>
-                <li><a href="explore.html" class="dropdown-item-custom fw-semibold"><i class="bi bi-grid-fill"></i> View All Topics</a></li>
-              </ul>
-            </li>
-
-            <!-- Knowledge Dropdown -->
-            <li class="nav-item">
-              <a href="explore.html" class="nav-link-custom">
-                Knowledge <i class="bi bi-chevron-down dropdown-caret"></i>
-              </a>
-              <ul class="nouriva-dropdown">
-                <li><a href="explore.html" class="dropdown-item-custom"><i class="bi bi-journal-bookmark"></i> Nutrition Encyclopedia</a></li>
-                <li><a href="explore.html?topic=recovery" class="dropdown-item-custom"><i class="bi bi-journal-medical"></i> Recovery Encyclopedia</a></li>
-                <li><a href="explore.html?topic=ingredients" class="dropdown-item-custom"><i class="bi bi-basket2"></i> Ingredient Guide</a></li>
-                <li><a href="explore.html?topic=nutrients" class="dropdown-item-custom"><i class="bi bi-diagram-3"></i> Nutrient Guide</a></li>
-                <li><a href="guides.html" class="dropdown-item-custom"><i class="bi bi-compass"></i> Meal Planning Guide</a></li>
-                <li><a href="guides.html" class="dropdown-item-custom"><i class="bi bi-droplet"></i> Hydration Guide</a></li>
-                <li><a href="glossary.html" class="dropdown-item-custom"><i class="bi bi-spellcheck"></i> Nutrition Terminology</a></li>
-                <li><a href="glossary.html" class="dropdown-item-custom"><i class="bi bi-translate"></i> Recovery Terminology</a></li>
-                <li><a href="about.html" class="dropdown-item-custom"><i class="bi bi-file-earmark-medical"></i> Evidence & Research</a></li>
-                <li><a href="contact.html#faq" class="dropdown-item-custom"><i class="bi bi-question-circle"></i> FAQ</a></li>
-              </ul>
-            </li>
-
-            <!-- Resources Dropdown -->
-            <li class="nav-item">
-              <a href="resources.html" class="nav-link-custom">
-                Resources <i class="bi bi-chevron-down dropdown-caret"></i>
-              </a>
-              <ul class="nouriva-dropdown">
-                <li><a href="resources.html?type=guides" class="dropdown-item-custom"><i class="bi bi-book"></i> Downloadable Guides</a></li>
-                <li><a href="resources.html?type=templates" class="dropdown-item-custom"><i class="bi bi-table"></i> Meal Planning Templates</a></li>
-                <li><a href="resources.html?type=checklists" class="dropdown-item-custom"><i class="bi bi-card-checklist"></i> Nutrition Checklists</a></li>
-                <li><a href="resources.html?type=recovery-checklists" class="dropdown-item-custom"><i class="bi bi-check2-circle"></i> Recovery Checklists</a></li>
-                <li><a href="resources.html?type=trackers" class="dropdown-item-custom"><i class="bi bi-water"></i> Hydration Trackers</a></li>
-                <li><a href="resources.html?type=grocery" class="dropdown-item-custom"><i class="bi bi-cart-check"></i> Grocery Planning Sheets</a></li>
-                <li><a href="resources.html?type=journal" class="dropdown-item-custom"><i class="bi bi-journal-text"></i> Food Journal Templates</a></li>
-                <li><a href="resources.html?type=reference" class="dropdown-item-custom"><i class="bi bi-file-earmark-ruled"></i> Reference Sheets</a></li>
-                <li><a href="resources.html" class="dropdown-item-custom fw-semibold"><i class="bi bi-printer"></i> Printable Resources</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a href="videos.html" class="nav-link-custom">Videos</a>
-            </li>
-            <li class="nav-item">
-              <a href="community.html" class="nav-link-custom">Community</a>
-            </li>
-            <li class="nav-item">
-              <a href="guides.html" class="nav-link-custom">Guides</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link-custom">About</a>
-            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link-custom active">Home</a></li>
+            <li class="nav-item"><a href="explore.html" class="nav-link-custom">Explore</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link-custom">Resources</a></li>
+            <li class="nav-item"><a href="videos.html" class="nav-link-custom">Videos</a></li>
+            <li class="nav-item"><a href="community.html" class="nav-link-custom">Community</a></li>
+            <li class="nav-item"><a href="guides.html" class="nav-link-custom">Guides</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link-custom">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link-custom">Contact</a></li>
           </ul>
         </nav>
 
         <!-- Right Header Actions -->
         <div class="nav-actions-right">
-          <!-- Global Search Trigger -->
-          <button class="search-trigger-btn search-trigger" aria-label="Open Global Search">
-            <i class="bi bi-search"></i>
-            <span class="d-none d-md-inline">Search</span>
-            <span class="kbd-shortcut d-none d-xl-inline">⌘K</span>
-          </button>
+          <!-- Desktop-only Actions (Hidden on <= 1024px) -->
+          <div class="header-desktop-actions">
+            <!-- Saved Collection Icon Button -->
+            <a href="saved.html" class="btn-icon" aria-label="Saved Collection" title="Saved Collection">
+              <i class="bi bi-bookmark"></i>
+            </a>
 
-          <!-- Saved Bookmark Link -->
-          <a href="saved.html" class="btn-icon" aria-label="Saved Items" title="Saved Collection">
-            <i class="bi bi-bookmark"></i>
-          </a>
+            <!-- Dark / Light Mode Toggle -->
+            <button class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+              <i class="bi bi-moon-stars"></i>
+            </button>
 
-          <!-- Dark / Light Mode Toggle -->
-          <button class="theme-toggle-btn" aria-label="Toggle light and dark mode">
-            <i class="bi bi-moon-stars"></i>
-          </button>
+            <!-- Login Button -->
+            <a href="login.html" class="btn btn-nour-primary btn-sm">Login</a>
+          </div>
 
-          <!-- Auth Links -->
-          <a href="login.html" class="nav-link-custom nav-auth-link">Login</a>
-          <a href="signup.html" class="nav-link-custom nav-auth-link">Sign Up</a>
-
-          <!-- Primary CTA Button -->
-          <a href="explore.html" class="btn btn-nour-primary d-none d-lg-inline-flex">
-            Explore Knowledge <i class="bi bi-arrow-right"></i>
-          </a>
-
-          <!-- Mobile Hamburger Toggle -->
+          <!-- Mobile / Tablet Hamburger Toggle (Visible on <= 1024px) -->
           <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
             <i class="bi bi-list"></i>
           </button>
@@ -157,7 +77,7 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
+  <!-- Mobile Navigation Drawer (Exact same links and buttons as Navbar) -->
   <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-label="Mobile Navigation">
     <div class="mobile-nav-header">
       <a href="index.html" class="brand-logo">
@@ -170,59 +90,26 @@
     </div>
 
     <ul class="mobile-nav-links">
-      <li class="mobile-nav-item"><a href="index.html" class="mobile-link">Home</a></li>
-      
-      <li class="mobile-nav-item">
-        <a href="javascript:void(0)" class="mobile-link mobile-dropdown-toggle" data-target="mobileExploreSub">
-          Explore <i class="bi bi-chevron-down"></i>
-        </a>
-        <ul class="mobile-sublinks" id="mobileExploreSub">
-          <li><a href="explore.html?topic=fundamentals"><i class="bi bi-arrow-right-short"></i> Nutrition Fundamentals</a></li>
-          <li><a href="explore.html?topic=recovery"><i class="bi bi-arrow-right-short"></i> Recovery Nutrition</a></li>
-          <li><a href="explore.html?topic=hydration"><i class="bi bi-arrow-right-short"></i> Hydration Dynamics</a></li>
-          <li><a href="explore.html?topic=mealplanning"><i class="bi bi-arrow-right-short"></i> Meal Planning</a></li>
-          <li><a href="explore.html"><i class="bi bi-arrow-right-short"></i> All Topics</a></li>
-        </ul>
-      </li>
-
-      <li class="mobile-nav-item">
-        <a href="javascript:void(0)" class="mobile-link mobile-dropdown-toggle" data-target="mobileKnowledgeSub">
-          Knowledge <i class="bi bi-chevron-down"></i>
-        </a>
-        <ul class="mobile-sublinks" id="mobileKnowledgeSub">
-          <li><a href="explore.html"><i class="bi bi-arrow-right-short"></i> Nutrition Encyclopedia</a></li>
-          <li><a href="explore.html?topic=recovery"><i class="bi bi-arrow-right-short"></i> Recovery Encyclopedia</a></li>
-          <li><a href="glossary.html"><i class="bi bi-arrow-right-short"></i> Nutrition Terminology</a></li>
-          <li><a href="glossary.html"><i class="bi bi-arrow-right-short"></i> Recovery Terminology</a></li>
-        </ul>
-      </li>
-
-      <li class="mobile-nav-item">
-        <a href="javascript:void(0)" class="mobile-link mobile-dropdown-toggle" data-target="mobileResourcesSub">
-          Resources <i class="bi bi-chevron-down"></i>
-        </a>
-        <ul class="mobile-sublinks" id="mobileResourcesSub">
-          <li><a href="resources.html"><i class="bi bi-arrow-right-short"></i> Downloadable Guides</a></li>
-          <li><a href="resources.html"><i class="bi bi-arrow-right-short"></i> Meal Planning Templates</a></li>
-          <li><a href="resources.html"><i class="bi bi-arrow-right-short"></i> Recovery Checklists</a></li>
-          <li><a href="resources.html"><i class="bi bi-arrow-right-short"></i> Hydration Trackers</a></li>
-        </ul>
-      </li>
-
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-link active">Home</a></li>
+      <li class="mobile-nav-item"><a href="explore.html" class="mobile-link">Explore</a></li>
+      <li class="mobile-nav-item"><a href="resources.html" class="mobile-link">Resources</a></li>
       <li class="mobile-nav-item"><a href="videos.html" class="mobile-link">Videos</a></li>
       <li class="mobile-nav-item"><a href="community.html" class="mobile-link">Community</a></li>
       <li class="mobile-nav-item"><a href="guides.html" class="mobile-link">Guides</a></li>
-      <li class="mobile-nav-item"><a href="saved.html" class="mobile-link">Saved Collection</a></li>
-      <li class="mobile-nav-item"><a href="about.html" class="mobile-link">About & Philosophy</a></li>
-      <li class="mobile-nav-item"><a href="contact.html" class="mobile-link">Contact & Feedback</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-link">About</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-link">Contact</a></li>
     </ul>
 
     <div class="mobile-nav-footer">
-      <div class="d-flex gap-2">
-        <a href="login.html" class="btn btn-nour-secondary w-50 justify-content-center">Login</a>
-        <a href="signup.html" class="btn btn-nour-primary w-50 justify-content-center">Sign Up</a>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <a href="saved.html" class="btn btn-nour-secondary w-100 justify-content-center">
+          <i class="bi bi-bookmark me-1"></i> Saved Collection
+        </a>
+        <button class="theme-toggle-btn flex-shrink-0" aria-label="Toggle light and dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
       </div>
-      <a href="explore.html" class="btn btn-nour-amber w-100 justify-content-center mt-2">Explore Knowledge Network</a>
+      <a href="login.html" class="btn btn-nour-primary w-100 justify-content-center">Login</a>
     </div>
   </div>
 
@@ -397,8 +284,8 @@
         <div class="col-lg-4 col-md-6">
           <div class="nour-card knowledge-card" data-topic="Hydration">
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1559839914-1b396e6790f9?auto=format&fit=crop&w=600&q=80" alt="Citrus infused mineral water">
-              <button class="card-save-btn" data-bookmark-id="know-3" data-bookmark-title="Hydration Fundamentals: Water, Salt & Osmotic Pressure" data-bookmark-category="Hydration" data-bookmark-type="article" data-bookmark-url="knowledge-details.html" data-bookmark-image="https://images.unsplash.com/photo-1559839914-1b396e6790f9?auto=format&fit=crop&w=600&q=80">
+              <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" alt="Citrus infused mineral water">
+              <button class="card-save-btn" data-bookmark-id="know-3" data-bookmark-title="Hydration Fundamentals: Water, Salt & Osmotic Pressure" data-bookmark-category="Hydration" data-bookmark-type="article" data-bookmark-url="knowledge-details.html" data-bookmark-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -667,10 +554,10 @@
         <div class="col-lg-4 col-md-6">
           <div class="nour-card video-card">
             <div class="video-thumb-wrap">
-              <img src="https://images.unsplash.com/photo-1507048821117-6573c2ddc495?auto=format&fit=crop&w=600&q=80" alt="Kitchen prep building a balanced plate">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Kitchen prep building a balanced plate">
               <a href="video-details.html" class="video-play-badge" aria-label="Play Video"><i class="bi bi-play-fill"></i></a>
               <span class="video-duration-chip">18:45</span>
-              <button class="card-save-btn" data-bookmark-id="vid-2" data-bookmark-title="Building a Balanced Plate: Real-time Kitchen Prep" data-bookmark-category="Practical Tutorial" data-bookmark-type="video" data-bookmark-url="video-details.html" data-bookmark-image="https://images.unsplash.com/photo-1507048821117-6573c2ddc495?auto=format&fit=crop&w=600&q=80">
+              <button class="card-save-btn" data-bookmark-id="vid-2" data-bookmark-title="Building a Balanced Plate: Real-time Kitchen Prep" data-bookmark-category="Practical Tutorial" data-bookmark-type="video" data-bookmark-url="video-details.html" data-bookmark-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -697,10 +584,10 @@
         <div class="col-lg-4 col-md-6">
           <div class="nour-card video-card">
             <div class="video-thumb-wrap">
-              <img src="https://images.unsplash.com/photo-1559839914-1b396e6790f9?auto=format&fit=crop&w=600&q=80" alt="Electrolyte and water science">
+              <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" alt="Electrolyte and water science">
               <a href="video-details.html" class="video-play-badge" aria-label="Play Video"><i class="bi bi-play-fill"></i></a>
               <span class="video-duration-chip">11:15</span>
-              <button class="card-save-btn" data-bookmark-id="vid-3" data-bookmark-title="Hydration: What You Need to Know" data-bookmark-category="Science Deep Dive" data-bookmark-type="video" data-bookmark-url="video-details.html" data-bookmark-image="https://images.unsplash.com/photo-1559839914-1b396e6790f9?auto=format&fit=crop&w=600&q=80">
+              <button class="card-save-btn" data-bookmark-id="vid-3" data-bookmark-title="Hydration: What You Need to Know" data-bookmark-category="Science Deep Dive" data-bookmark-type="video" data-bookmark-url="video-details.html" data-bookmark-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -995,7 +882,7 @@
     </div>
   </section>
 
-  <!-- NOURIVA FOOTER -->
+  <!-- NOURIVA FOOTER (Consistent Across All Pages) -->
   <footer class="nouriva-footer">
     <div class="container-editorial">
       <div class="row g-4">
@@ -1009,49 +896,38 @@
             An evidence-informed digital knowledge network dedicated to nutrition education, recovery habits, meal planning, hydration, and sustainable wellness routines.
           </p>
           <div class="d-flex gap-2 mt-3">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Knowledge</h5>
+          <h5 class="footer-heading">Navigation</h5>
           <ul class="footer-links">
-            <li><a href="explore.html">Encyclopedia</a></li>
-            <li><a href="explore.html?topic=recovery">Recovery Science</a></li>
-            <li><a href="explore.html?topic=hydration">Hydration Dynamics</a></li>
-            <li><a href="explore.html?topic=protein">Protein & Amino Acids</a></li>
-            <li><a href="glossary.html">Nutrition Terminology</a></li>
-            <li><a href="glossary.html">Recovery Glossary</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore Knowledge</a></li>
+            <li><a href="resources.html">Downloadable Tools</a></li>
+            <li><a href="videos.html">Video Masterclasses</a></li>
+            <li><a href="glossary.html">Terminology Glossary</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Resources</h5>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">Community & Guides</h5>
           <ul class="footer-links">
-            <li><a href="resources.html">Downloadable Guides</a></li>
-            <li><a href="resources.html">Meal Planning Sheets</a></li>
-            <li><a href="resources.html">Recovery Checklists</a></li>
-            <li><a href="resources.html">Hydration Trackers</a></li>
-            <li><a href="videos.html">Video Tutorials</a></li>
+            <li><a href="community.html">Community Discussions</a></li>
+            <li><a href="guides.html">Editorial Guides</a></li>
             <li><a href="saved.html">Saved Collection</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Community</h5>
-          <ul class="footer-links">
-            <li><a href="community.html">Discussion Board</a></li>
-            <li><a href="community.html">Recent Questions</a></li>
-            <li><a href="guides.html">Curated Guides</a></li>
             <li><a href="signup.html">Join Network</a></li>
             <li><a href="login.html">Account Login</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">About</h5>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">About NOURIVA</h5>
           <ul class="footer-links">
             <li><a href="about.html">Our Mission</a></li>
             <li><a href="about.html#standards">Content Standards</a></li>

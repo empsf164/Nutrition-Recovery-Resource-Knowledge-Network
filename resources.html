@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Downloadable Toolkits & Resources — NOURIVA</title>
-  <meta name="description" content="Free printable nutrition checklists, recovery trackers, meal planning spreadsheets, and reference sheets.">
+  <meta name="description"
+    content="Free printable nutrition checklists, recovery trackers, meal planning spreadsheets, and reference sheets.">
   <link rel="canonical" href="https://nouriva.org/resources.html">
-  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -19,13 +24,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
 
-  <!-- Health Disclaimer Bar -->
-  <div class="health-disclaimer-bar">
-    <i class="bi bi-shield-check"></i>
-    <span><strong>Educational Notice:</strong> NOURIVA provides educational resources and is not a substitute for professional medical or dietary advice.</span>
-  </div>
+<body>
 
   <!-- Primary Sticky Header -->
   <header class="nouriva-header">
@@ -36,59 +36,79 @@
           <span>NOURIVA</span>
         </a>
 
-        <nav class="d-none d-lg-block" aria-label="Main Navigation">
+        <!-- Main Desktop Navigation (Direct Links - No Dropdowns) -->
+        <nav class="desktop-nav-wrap d-none d-xl-block" aria-label="Main Navigation">
           <ul class="nav-menu-desktop">
             <li class="nav-item"><a href="index.html" class="nav-link-custom">Home</a></li>
             <li class="nav-item"><a href="explore.html" class="nav-link-custom">Explore</a></li>
-            <li class="nav-item"><a href="explore.html" class="nav-link-custom">Knowledge</a></li>
             <li class="nav-item"><a href="resources.html" class="nav-link-custom active">Resources</a></li>
             <li class="nav-item"><a href="videos.html" class="nav-link-custom">Videos</a></li>
             <li class="nav-item"><a href="community.html" class="nav-link-custom">Community</a></li>
             <li class="nav-item"><a href="guides.html" class="nav-link-custom">Guides</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link-custom">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link-custom">Contact</a></li>
           </ul>
         </nav>
 
+        <!-- Right Header Actions -->
         <div class="nav-actions-right">
-          <button class="search-trigger-btn search-trigger" aria-label="Open Global Search">
-            <i class="bi bi-search"></i>
-            <span class="d-none d-md-inline">Search</span>
-            <span class="kbd-shortcut d-none d-xl-inline">⌘K</span>
-          </button>
-          <a href="saved.html" class="btn-icon" aria-label="Saved Collection"><i class="bi bi-bookmark"></i></a>
-          <button class="theme-toggle-btn" aria-label="Toggle light and dark mode"><i class="bi bi-moon-stars"></i></button>
-          <a href="login.html" class="nav-link-custom nav-auth-link">Login</a>
-          <a href="signup.html" class="nav-link-custom nav-auth-link">Sign Up</a>
-          <a href="explore.html" class="btn btn-nour-primary d-none d-lg-inline-flex">Explore Knowledge <i class="bi bi-arrow-right"></i></a>
+          <!-- Desktop-only Actions (Hidden on <= 1024px) -->
+          <div class="header-desktop-actions">
+            <!-- Saved Collection Icon Button -->
+            <a href="saved.html" class="btn-icon" aria-label="Saved Collection" title="Saved Collection">
+              <i class="bi bi-bookmark"></i>
+            </a>
+
+            <!-- Dark / Light Mode Toggle -->
+            <button class="theme-toggle-btn" aria-label="Toggle light and dark mode"><i
+                class="bi bi-moon-stars"></i></button>
+
+            <!-- Login Button -->
+            <a href="login.html" class="btn btn-nour-primary btn-sm">Login</a>
+          </div>
+
+          <!-- Mobile / Tablet Hamburger Toggle (Visible on <= 1024px) -->
           <button class="mobile-toggle-btn" aria-label="Open Mobile Menu"><i class="bi bi-list"></i></button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+  <!-- Mobile Navigation Drawer (Exact same links and buttons as Navbar) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-label="Mobile Navigation">
     <div class="mobile-nav-header">
       <a href="index.html" class="brand-logo">
         <div class="brand-mark"><i class="bi bi-flower1"></i></div>
         <span>NOURIVA</span>
       </a>
-      <button class="btn-icon" id="mobileDrawerClose"><i class="bi bi-x-lg"></i></button>
+      <button class="btn-icon" id="mobileDrawerClose" aria-label="Close Mobile Menu"><i class="bi bi-x-lg"></i></button>
     </div>
     <ul class="mobile-nav-links">
       <li class="mobile-nav-item"><a href="index.html" class="mobile-link">Home</a></li>
-      <li class="mobile-nav-item"><a href="explore.html" class="mobile-link">Explore Knowledge</a></li>
-      <li class="mobile-nav-item"><a href="videos.html" class="mobile-link">Videos</a></li>
+      <li class="mobile-nav-item"><a href="explore.html" class="mobile-link">Explore</a></li>
       <li class="mobile-nav-item"><a href="resources.html" class="mobile-link active">Resources</a></li>
+      <li class="mobile-nav-item"><a href="videos.html" class="mobile-link">Videos</a></li>
       <li class="mobile-nav-item"><a href="community.html" class="mobile-link">Community</a></li>
       <li class="mobile-nav-item"><a href="guides.html" class="mobile-link">Guides</a></li>
-      <li class="mobile-nav-item"><a href="saved.html" class="mobile-link">Saved Collection</a></li>
       <li class="mobile-nav-item"><a href="about.html" class="mobile-link">About</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-link">Contact</a></li>
     </ul>
+    <div class="mobile-nav-footer">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <a href="saved.html" class="btn btn-nour-secondary w-100 justify-content-center">
+          <i class="bi bi-bookmark me-1"></i> Saved Collection
+        </a>
+        <button class="theme-toggle-btn flex-shrink-0" aria-label="Toggle light and dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-nour-primary w-100 justify-content-center">Login</a>
+    </div>
   </div>
 
   <!-- PAGE HEADER -->
-  <section class="section-padding-sm" style="background-color: var(--bg-surface-elevated); border-bottom: 1px solid var(--border-subtle);">
+  <section class="section-padding-sm"
+    style="background-color: var(--bg-surface-elevated); border-bottom: 1px solid var(--border-subtle);">
     <div class="container-editorial">
       <div class="row align-items-center">
         <div class="col-lg-8">
@@ -99,7 +119,8 @@
             </ol>
           </nav>
           <h1 class="hero-title mb-2">Resource Library & Toolkits</h1>
-          <p class="section-desc mb-0">Practical, printable templates, nutrition checklists, hydration trackers, and reference sheets.</p>
+          <p class="section-desc mb-0">Practical, printable templates, nutrition checklists, hydration trackers, and
+            reference sheets.</p>
         </div>
         <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
           <span class="badge-nouriva badge-amber px-3 py-2 fs-6">8 Practical Tools</span>
@@ -111,15 +132,21 @@
   <!-- RESOURCES FILTER & GRID -->
   <section class="section-padding">
     <div class="container-editorial">
-      
+
       <!-- Top Filters -->
-      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4 p-3 bg-surface rounded-3 border border-subtle">
+      <div
+        class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4 p-3 bg-surface rounded-3 border border-subtle">
         <div class="d-flex flex-wrap gap-2" id="resourceCategoryTabs">
-          <button class="btn btn-sm btn-nour-primary py-1 px-3 active resource-filter-btn" data-category="all">All Resources</button>
-          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn" data-category="templates">Templates</button>
-          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn" data-category="checklists">Checklists</button>
-          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn" data-category="trackers">Trackers</button>
-          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn" data-category="reference">Reference Sheets</button>
+          <button class="btn btn-sm btn-nour-primary py-1 px-3 active resource-filter-btn" data-category="all">All
+            Resources</button>
+          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn"
+            data-category="templates">Templates</button>
+          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn"
+            data-category="checklists">Checklists</button>
+          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn"
+            data-category="trackers">Trackers</button>
+          <button class="btn btn-sm btn-nour-secondary py-1 px-3 resource-filter-btn"
+            data-category="reference">Reference Sheets</button>
         </div>
         <div class="w-auto">
           <span class="text-muted small">Format: PDF & Printable</span>
@@ -128,7 +155,7 @@
 
       <!-- Resource Cards Grid -->
       <div class="row g-4" id="resourceCardsGrid">
-        
+
         <!-- Resource 1 -->
         <div class="col-lg-4 col-md-6 resource-item-col" data-category="templates">
           <div class="nour-card resource-card">
@@ -138,18 +165,24 @@
             </div>
             <h4 class="card-title">Weekly Nutrition & Recovery Planning Template</h4>
             <p class="card-desc">
-              Organize your weekly meal cadence, calculate macronutrient targets, and schedule prep days for optimal recovery.
+              Organize your weekly meal cadence, calculate macronutrient targets, and schedule prep days for optimal
+              recovery.
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Weekly Nutrition & Recovery Planning Template" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm"
+                  data-download-resource="Weekly Nutrition & Recovery Planning Template" data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Weekly Nutrition Planning Template" data-preview-desc="Includes 7-day meal layout, macro calculation formula sheet, and grocery batch list table.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Weekly Nutrition Planning Template"
+                  data-preview-desc="Includes 7-day meal layout, macro calculation formula sheet, and grocery batch list table.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-1" data-bookmark-title="Weekly Nutrition & Recovery Planning Template" data-bookmark-category="Meal Planning" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-1"
+                data-bookmark-title="Weekly Nutrition & Recovery Planning Template"
+                data-bookmark-category="Meal Planning" data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -165,18 +198,24 @@
             </div>
             <h4 class="card-title">Whole-Foods Grocery Shopping Checklist</h4>
             <p class="card-desc">
-              Categorized shopping list covering produce, lean proteins, complex grains, healthy fats, and recovery spices.
+              Categorized shopping list covering produce, lean proteins, complex grains, healthy fats, and recovery
+              spices.
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Whole-Foods Grocery Shopping Checklist" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm"
+                  data-download-resource="Whole-Foods Grocery Shopping Checklist" data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Whole-Foods Grocery Checklist" data-preview-desc="Organized into 6 pantry quadrants with ingredient density ratings.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Whole-Foods Grocery Checklist"
+                  data-preview-desc="Organized into 6 pantry quadrants with ingredient density ratings.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-2" data-bookmark-title="Whole-Foods Grocery Shopping Checklist" data-bookmark-category="Checklists" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-2"
+                data-bookmark-title="Whole-Foods Grocery Shopping Checklist" data-bookmark-category="Checklists"
+                data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -192,18 +231,24 @@
             </div>
             <h4 class="card-title">Daily Fluid & Electrolyte Intake Tracker</h4>
             <p class="card-desc">
-              Visual logging sheet to track water volume, salt replenishment, and monitor cellular hydration checkpoints.
+              Visual logging sheet to track water volume, salt replenishment, and monitor cellular hydration
+              checkpoints.
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Daily Fluid & Electrolyte Intake Tracker" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm"
+                  data-download-resource="Daily Fluid & Electrolyte Intake Tracker" data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Hydration & Electrolyte Tracker" data-preview-desc="Hourly fluid logging with sweat rate formula calculator.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Hydration & Electrolyte Tracker"
+                  data-preview-desc="Hourly fluid logging with sweat rate formula calculator.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-3" data-bookmark-title="Daily Fluid & Electrolyte Intake Tracker" data-bookmark-category="Trackers" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-3"
+                data-bookmark-title="Daily Fluid & Electrolyte Intake Tracker" data-bookmark-category="Trackers"
+                data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -223,14 +268,19 @@
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Post-Activity Recovery Routine Checklist" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm"
+                  data-download-resource="Post-Activity Recovery Routine Checklist" data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Recovery Routine Checklist" data-preview-desc="Step-by-step checklist from cool-down feeding to nocturnal sleep optimization.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Recovery Routine Checklist"
+                  data-preview-desc="Step-by-step checklist from cool-down feeding to nocturnal sleep optimization.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-4" data-bookmark-title="Post-Activity Recovery Routine Checklist" data-bookmark-category="Checklists" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-4"
+                data-bookmark-title="Post-Activity Recovery Routine Checklist" data-bookmark-category="Checklists"
+                data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -246,18 +296,24 @@
             </div>
             <h4 class="card-title">Food, Mood & Energy Mindful Journal</h4>
             <p class="card-desc">
-              Mindful tracking journal to connect meal compositions with sustained focus, digestion comfort, and muscle recovery.
+              Mindful tracking journal to connect meal compositions with sustained focus, digestion comfort, and muscle
+              recovery.
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Food, Mood & Energy Mindful Journal" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm" data-download-resource="Food, Mood & Energy Mindful Journal"
+                  data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Food, Mood & Energy Journal" data-preview-desc="Daily reflection prompts, macro checklists, and digestion rating scale.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Food, Mood & Energy Journal"
+                  data-preview-desc="Daily reflection prompts, macro checklists, and digestion rating scale.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-5" data-bookmark-title="Food, Mood & Energy Mindful Journal" data-bookmark-category="Templates" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-5"
+                data-bookmark-title="Food, Mood & Energy Mindful Journal" data-bookmark-category="Templates"
+                data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
@@ -273,73 +329,127 @@
             </div>
             <h4 class="card-title">Macronutrient & Leucine Reference Sheet</h4>
             <p class="card-desc">
-              1-page laminated quick-reference card showing grams of protein per ounce, essential amino acid profiles, and portion guides.
+              1-page laminated quick-reference card showing grams of protein per ounce, essential amino acid profiles,
+              and portion guides.
             </p>
             <div class="resource-card-footer">
               <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Macronutrient & Leucine Reference Sheet" data-download-format="PDF">
+                <button class="btn btn-nour-primary btn-sm"
+                  data-download-resource="Macronutrient & Leucine Reference Sheet" data-download-format="PDF">
                   <i class="bi bi-download"></i> Download
                 </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Macronutrient Reference Sheet" data-preview-desc="Comprehensive conversion table and leucine scoring for 40+ foods.">
+                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+                  data-preview-title="Macronutrient Reference Sheet"
+                  data-preview-desc="Comprehensive conversion table and leucine scoring for 40+ foods.">
                   Preview
                 </button>
               </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-6" data-bookmark-title="Macronutrient & Leucine Reference Sheet" data-bookmark-category="Reference Sheets" data-bookmark-type="resource" data-bookmark-url="resources.html">
+              <button class="btn-icon card-save-btn" data-bookmark-id="res-6"
+                data-bookmark-title="Macronutrient & Leucine Reference Sheet" data-bookmark-category="Reference Sheets"
+                data-bookmark-type="resource" data-bookmark-url="resources.html">
                 <i class="bi bi-bookmark"></i>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Resource 7 -->
-        <div class="col-lg-4 col-md-6 resource-item-col" data-category="trackers">
-          <div class="nour-card resource-card">
-            <div class="resource-card-header">
-              <div class="resource-format-icon"><i class="bi bi-moon-stars"></i></div>
-              <span class="badge-nouriva badge-forest">Printable Log</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Starter Toolkit Resource Bundles & Implementation Systems -->
+  <section class="section-padding bg-surface-elevated"
+    style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container-editorial">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="badge-nouriva badge-forest mb-2">Curated Systems</span>
+        <h2 class="section-title">Starter Toolkit & Protocol Bundles</h2>
+        <p class="section-desc">Download comprehensive multi-document workflow bundles organized for specific
+          nutritional and recovery objectives.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Bundle 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 bg-surface rounded-4 border border-medium h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge-nouriva badge-sage">Complete 3-in-1 Bundle</span>
+              <span class="text-muted small fw-bold"><i class="bi bi-folder2-open me-1"></i> 3 Files</span>
             </div>
-            <h4 class="card-title">Nocturnal Recovery & Sleep Hygiene Matrix</h4>
-            <p class="card-desc">
-              Evening nutrition and wind-down tracker to optimize body temperature, melatonin availability, and deep sleep stages.
+            <h4 class="font-editorial fs-4 mb-2">Essential Recovery Starter Pack</h4>
+            <p class="text-secondary small mb-3">
+              The foundational starter bundle for post-exertion recovery, hydration calculations, and weekly planning.
             </p>
-            <div class="resource-card-footer">
-              <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Nocturnal Recovery & Sleep Hygiene Matrix" data-download-format="PDF">
-                  <i class="bi bi-download"></i> Download
-                </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Sleep Hygiene Matrix" data-preview-desc="Late-meal timing rules and magnesium rich food checklists.">
-                  Preview
-                </button>
-              </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-7" data-bookmark-title="Nocturnal Recovery & Sleep Hygiene Matrix" data-bookmark-category="Trackers" data-bookmark-type="resource" data-bookmark-url="resources.html">
-                <i class="bi bi-bookmark"></i>
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-4" style="font-size: 0.84rem;">
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Weekly
+                Meal Planning Matrix (.pdf/.xlsx)</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i>
+                Whole-Foods Grocery Checklist (.pdf)</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Daily
+                Fluid Intake Log Sheet (.pdf)</li>
+            </ul>
+            <div class="mt-auto pt-3 border-top border-subtle">
+              <button class="btn btn-nour-primary w-100 justify-content-center"
+                data-download-resource="Essential Recovery Starter Pack Bundle" data-download-format="ZIP Archive">
+                <i class="bi bi-download me-1"></i> Download Starter Pack (.zip)
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Resource 8 -->
-        <div class="col-lg-4 col-md-6 resource-item-col" data-category="reference">
-          <div class="nour-card resource-card">
-            <div class="resource-card-header">
-              <div class="resource-format-icon"><i class="bi bi-diagram-3"></i></div>
-              <span class="badge-nouriva badge-sage">PDF Guide</span>
+        <!-- Bundle 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 bg-surface rounded-4 border border-medium h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge-nouriva badge-amber">Athlete Protocol</span>
+              <span class="text-muted small fw-bold"><i class="bi bi-folder2-open me-1"></i> 4 Files</span>
             </div>
-            <h4 class="card-title">Plant-Based Protein Complementarity Guide</h4>
-            <p class="card-desc">
-              Visual reference pairing grains and legumes (e.g. rice + pea, hummus + pita) to create complete amino acid profiles.
+            <h4 class="font-editorial fs-4 mb-2">High-Exertion Performance</h4>
+            <p class="text-secondary small mb-3">
+              Designed for rigorous training blocks, featuring precise electrolyte replacement and leucine timing
+              worksheets.
             </p>
-            <div class="resource-card-footer">
-              <div class="d-flex gap-2">
-                <button class="btn btn-nour-primary btn-sm" data-download-resource="Plant-Based Protein Complementarity Guide" data-download-format="PDF">
-                  <i class="bi bi-download"></i> Download
-                </button>
-                <button class="btn btn-nour-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" data-preview-title="Protein Complementarity Guide" data-preview-desc="Matrix diagram pairing 15 plant food combinations with leucine metrics.">
-                  Preview
-                </button>
-              </div>
-              <button class="btn-icon card-save-btn" data-bookmark-id="res-8" data-bookmark-title="Plant-Based Protein Complementarity Guide" data-bookmark-category="Reference Sheets" data-bookmark-type="resource" data-bookmark-url="resources.html">
-                <i class="bi bi-bookmark"></i>
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-4" style="font-size: 0.84rem;">
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> 3:1
+                Carbohydrate/Protein Ratio Blueprint</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i>
+                Sweat-Rate Sodium Replacement Formula</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Leucine &
+                Protein Density Cheat Sheet</li>
+            </ul>
+            <div class="mt-auto pt-3 border-top border-subtle">
+              <button class="btn btn-nour-primary w-100 justify-content-center"
+                data-download-resource="High-Exertion Performance System Bundle" data-download-format="ZIP Archive">
+                <i class="bi bi-download me-1"></i> Download Athlete Pack (.zip)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 bg-surface rounded-4 border border-medium h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge-nouriva badge-forest">Whole-Food Focus</span>
+              <span class="text-muted small fw-bold"><i class="bi bi-folder2-open me-1"></i> 3 Files</span>
+            </div>
+            <h4 class="font-editorial fs-4 mb-2">Plant-Based Bioavailability Kit</h4>
+            <p class="text-secondary small mb-3">
+              Comprehensive pairing frameworks to optimize iron, zinc, and complete amino acid absorption from whole
+              plants.
+            </p>
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-4" style="font-size: 0.84rem;">
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Protein
+                Complementarity Pairing Guide</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Phytate
+                Reduction & Soaking Guide</li>
+              <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Mindful
+                Food, Mood & Energy Journal</li>
+            </ul>
+            <div class="mt-auto pt-3 border-top border-subtle">
+              <button class="btn btn-nour-primary w-100 justify-content-center"
+                data-download-resource="Plant-Based Bioavailability Kit Bundle" data-download-format="ZIP Archive">
+                <i class="bi bi-download me-1"></i> Download Plant Kit (.zip)
               </button>
             </div>
           </div>
@@ -352,7 +462,8 @@
   <!-- Interactive Document Preview Modal -->
   <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content" style="background-color: var(--bg-surface); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+      <div class="modal-content"
+        style="background-color: var(--bg-surface); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
         <div class="modal-header border-bottom border-subtle">
           <div>
             <span class="badge-nouriva badge-sage mb-1">Document Preview</span>
@@ -362,7 +473,7 @@
         </div>
         <div class="modal-body p-4">
           <p class="text-secondary" id="previewModalDesc">Preview description loading...</p>
-          
+
           <div class="p-3 bg-subtle rounded-2 border border-subtle mb-3">
             <h6 class="fw-bold mb-2">Sample Document Layout:</h6>
             <div class="table-responsive-custom mb-0">
@@ -398,11 +509,13 @@
               </table>
             </div>
           </div>
-          <p class="small text-muted mb-0">Note: All NOURIVA tools are provided in printable high-resolution PDF format.</p>
+          <p class="small text-muted mb-0">Note: All NOURIVA tools are provided in printable high-resolution PDF format.
+          </p>
         </div>
         <div class="modal-footer border-top border-subtle">
           <button type="button" class="btn btn-nour-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-nour-primary btn-sm" id="btnDownloadFromModal" data-download-resource="NOURIVA Printable Resource" data-download-format="PDF">
+          <button type="button" class="btn btn-nour-primary btn-sm" id="btnDownloadFromModal"
+            data-download-resource="NOURIVA Printable Resource" data-download-format="PDF">
             <i class="bi bi-download"></i> Download Full PDF
           </button>
         </div>
@@ -410,60 +523,86 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- NOURIVA FOOTER -->
   <footer class="nouriva-footer">
     <div class="container-editorial">
       <div class="row g-4">
+
         <div class="col-lg-4 col-md-6 footer-brand-col">
           <a href="index.html" class="brand-logo mb-3 d-inline-flex">
             <div class="brand-mark"><i class="bi bi-flower1"></i></div>
             <span>NOURIVA</span>
           </a>
-          <p>An evidence-informed digital knowledge network dedicated to nutrition education, recovery habits, meal planning, hydration, and sustainable wellness routines.</p>
+          <p>
+            An evidence-informed digital knowledge network dedicated to nutrition education, recovery habits, meal
+            planning, hydration, and sustainable wellness routines.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
         </div>
+
         <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Knowledge</h5>
+          <h5 class="footer-heading">Navigation</h5>
           <ul class="footer-links">
-            <li><a href="explore.html">Encyclopedia</a></li>
-            <li><a href="explore.html?topic=recovery">Recovery Science</a></li>
-            <li><a href="glossary.html">Terminology</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Resources</h5>
-          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore Knowledge</a></li>
             <li><a href="resources.html">Downloadable Tools</a></li>
-            <li><a href="videos.html">Video Tutorials</a></li>
-            <li><a href="saved.html">Saved Collection</a></li>
+            <li><a href="videos.html">Video Masterclasses</a></li>
+            <li><a href="glossary.html">Terminology Glossary</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">Community</h5>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">Community & Guides</h5>
           <ul class="footer-links">
-            <li><a href="community.html">Discussions</a></li>
-            <li><a href="guides.html">Curated Guides</a></li>
+            <li><a href="community.html">Community Discussions</a></li>
+            <li><a href="guides.html">Editorial Guides</a></li>
+            <li><a href="saved.html">Saved Collection</a></li>
             <li><a href="signup.html">Join Network</a></li>
+            <li><a href="login.html">Account Login</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-6">
-          <h5 class="footer-heading">About</h5>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">About NOURIVA</h5>
           <ul class="footer-links">
             <li><a href="about.html">Our Mission</a></li>
             <li><a href="about.html#standards">Content Standards</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html#evidence">Evidence Approach</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+            <li><a href="contact.html#faq">Platform FAQ</a></li>
           </ul>
         </div>
+
       </div>
+
+      <!-- Mandatory Health Disclaimer Card -->
       <div class="footer-disclaimer-card">
-        <strong>Important Health & Educational Notice:</strong> The content provided on NOURIVA is strictly for general educational and informational purposes. NOURIVA is not a healthcare provider or clinical prescription platform.
+        <strong>Important Health & Educational Notice:</strong> The content provided on NOURIVA is strictly for general
+        educational and informational purposes. NOURIVA is not a healthcare provider, clinical diagnostic service, or
+        dietary prescription platform. Information presented does not constitute medical advice and should not replace
+        personalized evaluation, diagnosis, or treatment by a qualified physician or registered dietitian.
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 NOURIVA Digital Knowledge Network. All rights reserved.</span>
         <div class="d-flex gap-3">
           <a href="about.html" class="text-muted">Educational Standards</a>
           <a href="about.html" class="text-muted">Privacy Policy</a>
+          <a href="about.html" class="text-muted">Terms of Knowledge Use</a>
         </div>
       </div>
+
     </div>
   </footer>
 
@@ -477,7 +616,6 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // Preview Modal Dynamic Fill
     const previewModalEl = document.getElementById('previewModal');
     if (previewModalEl) {
       previewModalEl.addEventListener('show.bs.modal', function (event) {
@@ -491,7 +629,6 @@
       });
     }
 
-    // Category Tabs Filter
     const catBtns = document.querySelectorAll('.resource-filter-btn');
     const resourceCols = document.querySelectorAll('.resource-item-col');
     catBtns.forEach(btn => {
@@ -511,4 +648,5 @@
     });
   </script>
 </body>
+
 </html>
