@@ -124,40 +124,70 @@
   --bg-muted: #2E3733;            /* Separators */
   --bg-highlight: #28332E;        /* Highlight Box in Dark */
 
-  --text-primary: #F4EFEA;        /* Warm Off-white */
-  --text-secondary: #BDC8C3;      /* Soft Light Sage Text */
-  --text-muted: #85958E;          /* Muted Secondary */
+  --forest-900: #0A1712;
+  --forest-800: #8FA89B;          /* Sage accent for dark mode */
+  --forest-700: #ADC2B7;
+  --forest-600: #C2D4CC;
+  --forest-100: #1C2B24;          /* Dark tinted surface for dark mode */
+  --forest-50: #14201A;
+
+  --sage-700: #718E80;
+  --sage-600: #8FA89B;
+  --sage-500: #ADC2B7;
+  --sage-400: #ADC2B7;          /* Soft Sage Accent */
+  --sage-300: #CDDCD4;
+  --sage-200: #E2EDE7;
+  --sage-100: #1E2B25;
+  --sage-50: #15221C;
+
+  --amber-700: #F0A56C;
+  --amber-600: #E29962;
+  --amber-500: #DB9156;          /* Restrained Amber Accent */
+  --amber-400: #EBB07F;
+  --amber-100: #2C211A;
+  --amber-50: #201712;
+
+  --sand-500: #CCC0B2;
+  --sand-400: #E2D9CE;
+  --sand-300: #EDE6DE;
+  --sand-200: #2C3330;
+  --sand-100: #222926;
+  --sand-50: #181E1C;
+
+  --text-primary: #F5F3EF;        /* High Contrast Warm White */
+  --text-secondary: #D4DFD8;      /* High Contrast Light Sage Text */
+  --text-muted: #A3B5AC;          /* Clear Readable Secondary/Muted */
   --text-inverse: #101413;
-  --text-accent: #D8E4DE;
-  --text-amber: #E29962;
+  --text-accent: #E2ECE6;
+  --text-amber: #F0A56C;
 
-  --border-subtle: #2A332F;
-  --border-medium: #37443F;
-  --border-strong: #4F605A;
-  --border-focus: #8FA89B;
+  --border-subtle: #2F3B36;
+  --border-medium: #405049;
+  --border-strong: #586D64;
+  --border-focus: #ADC2B7;
 
-  --brand-primary: #8FA89B;
-  --brand-hover: #A7BCB2;
-  --brand-accent: #DB9156;
-  --brand-accent-hover: #E8A873;
+  --brand-primary: #ADC2B7;
+  --brand-hover: #C5D7CE;
+  --brand-accent: #E29962;
+  --brand-accent-hover: #F0A56C;
   --brand-soft: #1E2924;
 
   --badge-bg-sage: #1E2A24;
-  --badge-text-sage: #ADC2B7;
-  --badge-bg-amber: #2C211A;
-  --badge-text-amber: #DB9156;
-  --badge-bg-forest: #1F2E27;
-  --badge-text-forest: #A5C2B4;
-  --badge-bg-sand: #262D2A;
-  --badge-text-sand: #BDC8C3;
+  --badge-text-sage: #C5D9CF;
+  --badge-bg-amber: #2F2119;
+  --badge-text-amber: #F3AF7D;
+  --badge-bg-forest: #1C2D24;
+  --badge-text-forest: #BDD8CB;
+  --badge-bg-sand: #28302D;
+  --badge-text-sand: #D0DBD5;
 
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
-  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.7);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.7);
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.8);
 
-  --nav-glass-bg: rgba(16, 20, 19, 0.9);
-  --nav-glass-border: rgba(42, 51, 47, 0.8);
-  --modal-overlay: rgba(0, 0, 0, 0.75);
+  --nav-glass-bg: rgba(16, 20, 19, 0.92);
+  --nav-glass-border: rgba(47, 59, 54, 0.8);
+  --modal-overlay: rgba(0, 0, 0, 0.8);
 }

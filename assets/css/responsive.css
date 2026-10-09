@@ -83,13 +83,67 @@
   .auth-card {
     padding: 1.75rem;
   }
+
+  /* 1024px & Tab View: Videos page - 1 card in 1 row */
+  #videoCardsGrid > div,
+  .video-card-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 1024px & Tab View: Guides page - 1 card in 1 row */
+  .guides-stream-row > [class*="col-"],
+  .guide-card-col,
+  .flagship-guide-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 1024px & Tab View: Explore page - 1 card in 1 row */
+  #knowledgeCardsGrid > div,
+  .knowledge-card-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 1024px: Resources page equal button sizes */
+  .resource-card-footer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .resource-card-footer .d-flex {
+    flex: 1 1 auto;
+    width: auto;
+    gap: 0.5rem;
+  }
+
+  .resource-card-footer .d-flex .btn {
+    flex: 1 1 50%;
+    min-height: 38px;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.86rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* ==========================================================================
-   Tablet & 1024px Views (600px to 1024px):
-   - Align 2 cards in one row in all sections across all pages
-   - Align the last odd-numbered card in center alignment
-   - Keep full-width cards (e.g. Flagship Guide) separately in their own full row
+   Tablet Views (600px to 1024px):
+   - Resources Grid: 2 cards per row with 3rd card in center
+   - Live Exchanges Grid: 2 cards per row with 3rd card in center
+   - Home structured domains & general topic cards
    ========================================================================== */
 @media (min-width: 600px) and (max-width: 1024px) {
   /* Sidebar and main content layout in explore.html / doc pages */
@@ -101,64 +155,55 @@
     width: 100% !important;
   }
 
-  /* Full-width flagship guide & hero cards remain on their own single full row */
-  .col-12,
-  .flagship-guide-col,
-  .col-12:has(.nour-card) {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  /* 1. Force 2 cards per row (50% width) for all grid card columns */
-  #resourceCardsGrid > div,
-  #videoCardsGrid > div,
-  #knowledgeCardsGrid > div,
-  #savedItemsGrid > div,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .knowledge-card-col,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .video-card-col,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .resource-item-col,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-4,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-3,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-6,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-md-6,
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.topic-card) > [class*="col-"],
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.video-card) > [class*="col-"],
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.resource-card) > [class*="col-"] {
+  /* Resources Page 2-column grid on tablet */
+  #resourceCardsGrid > .resource-item-col,
+  #resourceCardsGrid > div {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
   }
 
-  /* 2. Center-align the last odd number card in 2-column grids */
-  #resourceCardsGrid > div:last-child:nth-child(odd),
-  #videoCardsGrid > div:last-child:nth-child(odd),
-  #knowledgeCardsGrid > div:last-child:nth-child(odd),
-  #savedItemsGrid > div:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .knowledge-card-col:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .video-card-col:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row) > .resource-item-col:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-4:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-3:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-lg-6:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.nour-card) > .col-md-6:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.topic-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.video-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.resource-card) > [class*="col-"]:last-child:nth-child(odd) {
+  /* Resources Page 3rd card centered on tab view */
+  #resourceCardsGrid > .resource-item-col:nth-child(3):last-child,
+  #resourceCardsGrid > div:last-child:nth-child(odd) {
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  /* Override to guarantee Flagship Guide never gets margin-auto or 50% width */
-  .flagship-guide-col,
-  .col-12.flagship-guide-col {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* Community Page: Live Exchanges 3rd card centered on tab view */
+  .live-exchange-col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  .live-exchange-col:nth-child(3):last-child,
+  .live-exchange-col:last-child:nth-child(odd) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Home page topic cards */
+  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.topic-card) > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  .row:not(.nouriva-footer .row):not(.auth-row):not(.header-row):has(.topic-card) > [class*="col-"]:last-child:nth-child(odd) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Saved Items Grid */
+  #savedItemsGrid > div {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+  #savedItemsGrid > div:last-child:nth-child(odd) {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* Protect footer columns */
@@ -193,6 +238,65 @@
 
   .doc-article-pane {
     padding: 1.5rem;
+  }
+
+  /* Before Footer CTA buttons equal size on mobile */
+  .before-footer-cta-btns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .before-footer-cta-btns .btn,
+  .before-footer-cta-btns .cta-btn-primary,
+  .before-footer-cta-btns .cta-btn-secondary {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Mobile card meta alignment */
+  .card-meta-top,
+  .card-meta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .card-meta-top span,
+  .card-meta-top .badge-nouriva,
+  .card-meta-bottom span,
+  .card-meta-bottom a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  /* Guides page below hero mobile alignment */
+  .flagship-guide-col .nour-card {
+    padding: 1.5rem !important;
+  }
+
+  .flagship-guide-col .d-flex.align-items-center.gap-3 {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  .flagship-guide-col .d-flex.align-items-center.gap-3 .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .guides-stream-row .nour-card {
+    padding: 1.25rem !important;
   }
 
   .discussion-card {

@@ -292,6 +292,35 @@ https://nouriva.org
     });
   }
 
+  // Back to Top Button Coordinator
+  function initBackToTop() {
+    let btn = document.getElementById('backToTop');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'backToTop';
+      btn.className = 'back-to-top-btn';
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.setAttribute('title', 'Back to top');
+      btn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+      document.body.appendChild(btn);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 280) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   // Global DOM Init
   document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -300,5 +329,6 @@ https://nouriva.org
     initPersonalizedContent();
     initSavedTabs();
     initGlossary();
+    initBackToTop();
   });
 })();
